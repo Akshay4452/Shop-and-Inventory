@@ -344,6 +344,7 @@ GameObject:
   m_Component:
   - component: {fileID: 54980669}
   - component: {fileID: 54980670}
+  - component: {fileID: 54980671}
   m_Layer: 5
   m_Name: MaterialsPage
   m_TagString: Untagged
@@ -411,6 +412,18 @@ MonoBehaviour:
   m_Spacing: {x: 100, y: 100}
   m_Constraint: 2
   m_ConstraintCount: 3
+--- !u!114 &54980671
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 54980668}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 92620ba84a44b674590e880763424bee, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &63187364
 GameObject:
   m_ObjectHideFlags: 0
@@ -902,6 +915,7 @@ GameObject:
   m_Component:
   - component: {fileID: 129247606}
   - component: {fileID: 129247607}
+  - component: {fileID: 129247608}
   m_Layer: 5
   m_Name: WeaponsPage
   m_TagString: Untagged
@@ -969,6 +983,18 @@ MonoBehaviour:
   m_Spacing: {x: 100, y: 100}
   m_Constraint: 2
   m_ConstraintCount: 3
+--- !u!114 &129247608
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 129247605}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 92620ba84a44b674590e880763424bee, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &170582312
 GameObject:
   m_ObjectHideFlags: 0
@@ -3114,6 +3140,7 @@ GameObject:
   m_Component:
   - component: {fileID: 924555107}
   - component: {fileID: 924555108}
+  - component: {fileID: 924555109}
   m_Layer: 5
   m_Name: ConsumablesPage
   m_TagString: Untagged
@@ -3181,6 +3208,18 @@ MonoBehaviour:
   m_Spacing: {x: 100, y: 100}
   m_Constraint: 2
   m_ConstraintCount: 3
+--- !u!114 &924555109
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 924555106}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 92620ba84a44b674590e880763424bee, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &932018634
 GameObject:
   m_ObjectHideFlags: 0
@@ -5454,6 +5493,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1443272858}
   - component: {fileID: 1443272859}
+  - component: {fileID: 1443272860}
   m_Layer: 5
   m_Name: TreasurePage
   m_TagString: Untagged
@@ -5521,6 +5561,18 @@ MonoBehaviour:
   m_Spacing: {x: 100, y: 100}
   m_Constraint: 2
   m_ConstraintCount: 3
+--- !u!114 &1443272860
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1443272857}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 92620ba84a44b674590e880763424bee, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1453072817
 GameObject:
   m_ObjectHideFlags: 0
@@ -6408,6 +6460,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1619633920}
+  - component: {fileID: 1619633921}
   m_Layer: 5
   m_Name: PageGroup
   m_TagString: Untagged
@@ -6439,6 +6492,23 @@ RectTransform:
   m_AnchoredPosition: {x: 0.0024719, y: -27.733}
   m_SizeDelta: {x: 960, y: 636.53}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1619633921
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1619633919}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e32056ec9a2bef489881ca4933745a6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  pages:
+  - {fileID: 54980668}
+  - {fileID: 129247605}
+  - {fileID: 924555106}
+  - {fileID: 1443272857}
 --- !u!1 &1669239021
 GameObject:
   m_ObjectHideFlags: 0
@@ -6705,7 +6775,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 15}
   m_SizeDelta: {x: 0, y: 50}
   m_Pivot: {x: 0.5, y: 1}
 --- !u!114 &1729129506
@@ -6937,7 +7007,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 15}
   m_SizeDelta: {x: 0, y: 50}
   m_Pivot: {x: 0.5, y: 1}
 --- !u!114 &1820859466
@@ -7161,7 +7231,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 15}
   m_SizeDelta: {x: 0, y: 50}
   m_Pivot: {x: 0.5, y: 1}
 --- !u!114 &1850440224
