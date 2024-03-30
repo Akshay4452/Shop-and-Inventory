@@ -1,6 +1,7 @@
 using ServiceLocator.Events;
 using System.Collections;
 using System.Collections.Generic;
+using System.Runtime.InteropServices.WindowsRuntime;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -28,6 +29,8 @@ public class TabGroup : MonoBehaviour
         tabButtons[defaultActiveTabIndex].GetComponent<Image>().color = activeTabColor; // Making default tab active
     }
 
+    public int GetDefaultActiveTabIndex() { return defaultActiveTabIndex; }
+
     private void SetActiveTab(int idx)
     {
         if (idx != activeTabIndex)
@@ -39,7 +42,7 @@ public class TabGroup : MonoBehaviour
 
             tabButtons[idx].GetComponent<Image>().color = activeTabColor;
             activeTabIndex = idx;
-            if (prevActiveTabIndex != activeTabIndex && prevActiveTabIndex != -1)
+            if (prevActiveTabIndex != activeTabIndex)
                 tabButtons[prevActiveTabIndex].GetComponent<Image>().color = Color.white;
         }
         else
