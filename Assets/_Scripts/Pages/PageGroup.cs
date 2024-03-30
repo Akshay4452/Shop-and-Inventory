@@ -5,7 +5,7 @@ using UnityEngine;
 
 public class PageGroup : MonoBehaviour
 {
-    [SerializeField] public List<GameObject> pages;
+    [SerializeField] public List<Page> pages;
     private int activePageIndex;
     private int prevActivePageIndex;
 
@@ -19,10 +19,10 @@ public class PageGroup : MonoBehaviour
         if(idx != activePageIndex)
         {
             prevActivePageIndex = activePageIndex;
-            pages[idx].SetActive(true);
+            pages[idx].gameObject.SetActive(true);
             activePageIndex = idx;
             if(prevActivePageIndex != activePageIndex && prevActivePageIndex != -1)
-                pages[prevActivePageIndex].SetActive(false);
+                pages[prevActivePageIndex].gameObject.SetActive(false);
         } 
         else
         {
