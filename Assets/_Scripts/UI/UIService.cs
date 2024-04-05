@@ -24,12 +24,19 @@ namespace ServiceLocator.UI
 
         private void Start()
         {
-            if(tabsList == null || pagesList == null)
-            {
-                Debug.LogError("Tab Group or Page Group component is missing in UI Service");
-            }
+            if (tabsList == null || pagesList == null) { Debug.LogError("Tab Group or Page Group component is missing in UI Service"); }
             activeTabColor = Color.red;
+            InitializeTabsAndPages();
+            SubscribeToEvents();
+        }
+        public void SubscribeToEvents()
+        {
+            EventService.Instance.OnTabSelected.AddListener(SetActiveTab);
+            EventService.Instance.OnTabSelected.AddListener(SetActivePage);
+        }
 
+        private void InitializeTabsAndPages()
+        {
             // Tab section
             activeTabIndex = -1;
             prevActiveTabIndex = -1;
@@ -41,13 +48,6 @@ namespace ServiceLocator.UI
             prevActivePageIndex = -1;
             defaultActivePageIndex = GetDefaultActiveTabIndex();
             pagesList[defaultActivePageIndex].gameObject.SetActive(true);
-
-            SubscribeToEvents();
-        }
-        public void SubscribeToEvents()
-        {
-            EventService.Instance.OnTabSelected.AddListener(SetActiveTab);
-            EventService.Instance.OnTabSelected.AddListener(SetActivePage);
         }
         public Color ActiveTabColor { get { return activeTabColor; } }
         public int GetDefaultActiveTabIndex() { return defaultActiveTabIndex; }
