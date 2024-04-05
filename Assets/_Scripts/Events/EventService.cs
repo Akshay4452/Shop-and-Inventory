@@ -1,23 +1,14 @@
+using ServiceLocator.Utilities;
+
 namespace ServiceLocator.Events
 {
-    public class EventService
+    public class EventService : GenericMonoSingleton<EventService>
     {
-        private static EventService instance;
-        public static EventService Instance
-        {
-            get
-            {
-                if(instance == null)
-                {
-                    instance = new EventService();
-                }
-                return instance;
-            }
-        }
         public EventController<int> OnTabSelected { get; private set; }
 
-        public EventService()
+        protected override void Awake()
         {
+            base.Awake();
             OnTabSelected = new EventController<int>();
         }
     }
