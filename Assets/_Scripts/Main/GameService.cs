@@ -13,6 +13,8 @@ public class GameService : GenericMonoSingleton<GameService>
     [SerializeField] private UIService uIService;
     public UIService UIService => uIService; // public getter function for UI Service
 
+    //[Header("Shop Details")]
+
     private void Start()
     {
         shopService = new ShopService();
