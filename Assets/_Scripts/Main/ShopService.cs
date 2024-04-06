@@ -7,13 +7,22 @@ namespace ServiceLocator.ShopService
 {
     public class ShopService
     {
-        private List<Item> shopItems;
-        private int itemCount;
+        private List<Item> materialItems;
+        private List<Item> weaponItems;
+        private List<Item> consumableItems;
+        private List<Item> treasureItems;
+
+        private int materialItemCount;
+        private int weaponItemCount;
+        private int consumableItemCount;
+        private int treasureItemCount;
 
         public ShopService()
         {
-            shopItems = new List<Item>();
-            itemCount = 0;
+            materialItems = new List<Item>();
+            weaponItems = new List<Item>();
+            consumableItems = new List<Item>();
+            treasureItems = new List<Item>();
         }
 
         public Item BuyItem()
@@ -24,7 +33,7 @@ namespace ServiceLocator.ShopService
             // Reduce item count by 1 after player buys an item from the shop
             // If transaction is successful, play ching sound else play error sound
             // Add the purchased item to inventory
-            itemCount--;
+            //itemCount--;
 
             return selectedItem;
         } 
